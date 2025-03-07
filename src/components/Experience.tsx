@@ -48,7 +48,7 @@ const Experience = () => {
   const [activeExp, setActiveExp] = useState(experiences[0].id);
 
   return (
-    <AnimatedSection id="experience" className="container-section bg-gray-50">
+    <AnimatedSection id="experience" className="container-section bg-pastel-cream/50">
       <span className="block text-center text-primary font-medium mb-4">My Experience</span>
       <h2 className="section-heading">Professional Journey</h2>
       <p className="section-subheading">
@@ -70,15 +70,15 @@ const Experience = () => {
                         "w-full text-left p-4 rounded-lg transition-all",
                         activeExp === exp.id
                           ? index % 2 === 0 
-                            ? "purple-gradient text-white shadow-md" 
-                            : "green-gradient text-gray-800 shadow-md"
+                            ? "warm-gradient shadow-md" 
+                            : "accent-gradient text-white shadow-md"
                           : "bg-gray-50 hover:bg-gray-100"
                       )}
                     >
                       <h3 className="font-medium">{exp.title}</h3>
                       <p className={cn(
                         "text-sm", 
-                        activeExp === exp.id 
+                        activeExp === exp.id && index % 2 !== 0
                           ? "text-white/90" 
                           : "text-gray-500"
                       )}>
@@ -98,8 +98,8 @@ const Experience = () => {
                   className={cn(
                     "rounded-xl p-6 transition-all duration-300 border",
                     index % 2 === 0 
-                      ? "bg-pastel-lightpurple border-pastel-purple/30" 
-                      : "bg-pastel-lightgreen border-pastel-green/30",
+                      ? "bg-pastel-peach/10 border-pastel-peach/30" 
+                      : "bg-pastel-pink/10 border-pastel-pink/30",
                     activeExp === exp.id
                       ? "opacity-100 scale-100"
                       : "opacity-0 scale-95 hidden"
@@ -108,7 +108,7 @@ const Experience = () => {
                   <div className="flex items-start">
                     <div className={cn(
                       "flex-shrink-0 p-3 rounded-lg mr-4",
-                      index % 2 === 0 ? "bg-pastel-purple" : "bg-pastel-green"
+                      index % 2 === 0 ? "bg-pastel-orange/80" : "bg-pastel-pink/80"
                     )}>
                       <Briefcase size={24} className={index % 2 === 0 ? "text-white" : "text-gray-800"} />
                     </div>
@@ -126,7 +126,7 @@ const Experience = () => {
                         <li key={i} className="flex items-start">
                           <span className={cn(
                             "inline-block w-2 h-2 rounded-full mt-2 mr-2",
-                            index % 2 === 0 ? "bg-pastel-purple" : "bg-pastel-green"
+                            index % 2 === 0 ? "bg-pastel-orange" : "bg-pastel-pink"
                           )}></span>
                           <span className="text-gray-600">{achievement}</span>
                         </li>

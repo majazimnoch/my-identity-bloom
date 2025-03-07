@@ -15,7 +15,7 @@ const About = () => {
         <div className="section-box p-8 mt-16">
           <div className="grid md:grid-cols-2 gap-12">
             <div className="relative">
-              <div className="aspect-square rounded-2xl overflow-hidden shadow-md border border-pastel-purple/30">
+              <div className="aspect-square rounded-xl overflow-hidden shadow-md border border-pastel-peach/30">
                 {/* Replace with your image */}
                 <img
                   src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
@@ -23,13 +23,13 @@ const About = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute -bottom-6 -right-6 w-28 h-28 purple-gradient rounded-xl p-4 shadow-lg flex items-center justify-center">
-                <span className="text-2xl font-bold text-white">10+</span>
-                <span className="text-sm ml-2 text-white">Years Experience</span>
+              <div className="absolute -bottom-6 -right-6 w-28 h-28 warm-gradient rounded-xl p-4 shadow-lg flex items-center justify-center">
+                <span className="text-2xl font-bold text-primary">10+</span>
+                <span className="text-sm ml-2 text-gray-800">Years Experience</span>
               </div>
             </div>
             <div className="flex flex-col justify-center">
-              <h3 className="text-2xl font-medium mb-6 font-playfair">
+              <h3 className="text-2xl font-medium mb-6">
                 A Creative Professional Dedicated to Excellence & Innovation
               </h3>
               <p className="text-gray-600 mb-6">
@@ -39,19 +39,19 @@ const About = () => {
                 I believe in a thoughtful, audience-centered approach to creative problem-solving, combining analytical thinking with imaginative solutions to address complex challenges.
               </p>
               <div className="grid grid-cols-2 gap-6 mt-4">
-                <div className="bg-pastel-lightpurple p-4 rounded-lg">
+                <div className="bg-pastel-peach/20 p-4 rounded-lg">
                   <h4 className="text-lg font-medium mb-2">Education</h4>
                   <p className="text-gray-600">Bachelor of Arts, University Name, Year</p>
                 </div>
-                <div className="bg-pastel-lightgreen p-4 rounded-lg">
+                <div className="bg-pastel-pink/20 p-4 rounded-lg">
                   <h4 className="text-lg font-medium mb-2">Location</h4>
                   <p className="text-gray-600">City, Country</p>
                 </div>
-                <div className="bg-pastel-lightgreen p-4 rounded-lg">
+                <div className="bg-pastel-pink/20 p-4 rounded-lg">
                   <h4 className="text-lg font-medium mb-2">Email</h4>
                   <p className="text-gray-600">contact@example.com</p>
                 </div>
-                <div className="bg-pastel-lightpurple p-4 rounded-lg">
+                <div className="bg-pastel-peach/20 p-4 rounded-lg">
                   <h4 className="text-lg font-medium mb-2">Employment</h4>
                   <p className="text-gray-600">Available for opportunities</p>
                 </div>

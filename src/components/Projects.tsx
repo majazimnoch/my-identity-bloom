@@ -84,8 +84,8 @@ const Projects = () => {
                 "px-4 py-2 rounded-full text-sm font-medium transition-all",
                 activeCategory === category
                   ? index % 2 === 0 
-                    ? "purple-gradient text-white shadow-md" 
-                    : "green-gradient text-gray-800 shadow-md"
+                    ? "warm-gradient shadow-sm" 
+                    : "accent-gradient text-white shadow-sm"
                   : "bg-gray-100 text-gray-600 hover:bg-gray-200"
               )}
             >
@@ -102,7 +102,7 @@ const Projects = () => {
               href={project.link}
               className={cn(
                 "group overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full rounded-xl",
-                index % 2 === 0 ? "border border-pastel-purple/30" : "border border-pastel-green/30"
+                index % 2 === 0 ? "border border-pastel-peach/30" : "border border-pastel-pink/30"
               )}
             >
               <div className="aspect-video overflow-hidden">
@@ -119,11 +119,11 @@ const Projects = () => {
                   </h3>
                   <span className={cn(
                     "inline-block p-2 rounded-full transition-colors",
-                    index % 2 === 0 ? "bg-pastel-lightpurple group-hover:bg-pastel-purple" : "bg-pastel-lightgreen group-hover:bg-pastel-green"
+                    index % 2 === 0 ? "bg-pastel-peach/40 group-hover:bg-pastel-orange" : "bg-pastel-pink/40 group-hover:bg-pastel-pink"
                   )}>
                     <ArrowUpRight size={16} className={cn(
                       "transition-colors",
-                      index % 2 === 0 ? "text-gray-500 group-hover:text-white" : "text-gray-600 group-hover:text-gray-800"
+                      index % 2 === 0 ? "text-gray-500 group-hover:text-white" : "text-gray-600 group-hover:text-white"
                     )} />
                   </span>
                 </div>
@@ -131,7 +131,7 @@ const Projects = () => {
                 <div className="mt-4">
                   <span className={cn(
                     "inline-block px-3 py-1 rounded-full text-xs font-medium",
-                    index % 2 === 0 ? "bg-pastel-lightpurple text-gray-700" : "bg-pastel-lightgreen text-gray-700"
+                    index % 2 === 0 ? "bg-pastel-peach/30 text-gray-700" : "bg-pastel-pink/30 text-gray-700"
                   )}>
                     {project.category}
                   </span>

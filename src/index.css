@@ -1,16 +1,16 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /* Import fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&display=swap');
 
 @layer base {
   :root {
-    --background: 0 0% 96%;
-    --foreground: 220 20% 10%;
+    --background: 30 30% 98%;
+    --foreground: 20 10% 15%;
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
@@ -18,26 +18,26 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 260 60% 65%;
-    --primary-foreground: 260 40% 98%;
+    --primary: 20 100% 50%;
+    --primary-foreground: 60 30% 98%;
 
-    --secondary: 120 70% 80%;
-    --secondary-foreground: 120 25% 25%;
+    --secondary: 340 80% 80%;
+    --secondary-foreground: 340 50% 30%;
 
-    --muted: 260 20% 96%;
+    --muted: 20 20% 96%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 120 40% 95%;
-    --accent-foreground: 120 25% 25%;
+    --accent: 30 70% 94%;
+    --accent-foreground: 30 30% 30%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 20 20% 90%;
+    --input: 20 20% 90%;
+    --ring: 20 70% 50%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
   }
 
   .dark {
@@ -50,11 +50,11 @@
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 20 70% 60%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 340 50% 40%;
+    --secondary-foreground: 0 0% 100%;
 
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
@@ -85,15 +85,15 @@
   }
   
   h1, h2, h3, h4, h5, h6 {
-    @apply font-medium tracking-tight;
+    @apply font-medium tracking-tight font-display;
   }
   
   h1 {
-    @apply text-4xl md:text-5xl lg:text-6xl font-playfair;
+    @apply text-4xl md:text-5xl lg:text-6xl;
   }
   
   h2 {
-    @apply text-3xl md:text-4xl font-playfair;
+    @apply text-3xl md:text-4xl;
   }
   
   h3 {
@@ -105,13 +105,13 @@
   }
   
   .creative-heading {
-    @apply font-caveat text-3xl md:text-4xl lg:text-5xl text-primary;
+    @apply font-display text-3xl md:text-4xl lg:text-5xl text-primary italic;
   }
 }
 
 @layer components {
   .glass {
-    @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-lg;
+    @apply bg-white/80 backdrop-blur-sm border border-white/20 shadow-md;
   }
   
   .container-section {
@@ -127,7 +127,7 @@
   }
   
   .subtle-button {
-    @apply inline-flex items-center justify-center rounded-md bg-secondary px-4 py-2 text-sm font-medium text-secondary-foreground transition-colors hover:bg-secondary/80 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2;
+    @apply inline-flex items-center justify-center rounded-md bg-secondary/20 px-4 py-2 text-sm font-medium text-secondary-foreground transition-colors hover:bg-secondary/30 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2;
   }
   
   .primary-button {
@@ -135,14 +135,14 @@
   }
   
   .section-box {
-    @apply bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden;
+    @apply bg-white rounded-xl shadow-sm border border-pastel-peach/20 overflow-hidden;
   }
   
-  .purple-gradient {
-    @apply bg-gradient-to-r from-pastel-lightpurple to-pastel-purple;
+  .warm-gradient {
+    @apply bg-gradient-to-r from-pastel-peach to-pastel-pink/30;
   }
   
-  .green-gradient {
-    @apply bg-gradient-to-r from-pastel-lightgreen to-pastel-green;
+  .accent-gradient {
+    @apply bg-gradient-to-r from-pastel-orange/80 to-pastel-pink/80;
   }
 }

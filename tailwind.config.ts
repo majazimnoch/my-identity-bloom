@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -68,13 +67,12 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				pastel: {
-					purple: '#C4B6EB',
-					green: '#D1F5B1',
-					pink: '#FFDEE2',
-					blue: '#D3E4FD',
-					gray: '#F1F0FB',
-					lightpurple: '#E8E1F8',
-					lightgreen: '#E6F9D9',
+					pink: '#F7B0E2',
+					peach: '#FCE5D2',
+					orange: '#FF5402',
+					cream: '#FEF6ED',
+					lightpink: '#FBE3F2',
+					lightorange: '#FFECE3',
 				}
 			},
 			borderRadius: {
@@ -133,8 +131,8 @@ export default {
 			},
 			fontFamily: {
 				sans: ['Inter var', 'sans-serif'],
-				playfair: ['Playfair Display', 'serif'],
-				caveat: ['Caveat', 'cursive'],
+				serif: ['Libre Caslon Display', 'serif'],
+				display: ['Libre Caslon Display', 'serif'],
 			}
 		}
 	},

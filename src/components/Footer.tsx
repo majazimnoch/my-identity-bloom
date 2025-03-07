@@ -5,7 +5,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   
   return (
-    <footer className="bg-gray-50 py-12 mt-16">
+    <footer className="bg-pastel-cream/80 py-12 mt-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center">
           <div className="flex items-center justify-center space-x-6 mb-8">
@@ -40,7 +40,7 @@ const Footer = () => {
           </div>
           
           <div className="text-center mb-4">
-            <h2 className="text-2xl font-bold mb-2">Your Name</h2>
+            <h2 className="text-2xl font-medium mb-2">Your Name</h2>
             <p className="text-gray-600">Professional Portfolio</p>
           </div>
           

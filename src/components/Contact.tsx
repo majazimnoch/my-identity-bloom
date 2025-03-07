@@ -40,9 +40,9 @@ const Contact = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="md:col-span-1">
               <div className="space-y-6">
-                <div className="bg-pastel-lightpurple rounded-xl p-6 shadow-sm border border-pastel-purple/30">
+                <div className="bg-pastel-peach/20 rounded-xl p-6 shadow-sm border border-pastel-peach/30">
                   <div className="flex items-start">
-                    <div className="bg-pastel-purple p-3 rounded-full mr-4">
+                    <div className="bg-pastel-orange p-3 rounded-full mr-4">
                       <Mail size={20} className="text-white" />
                     </div>
                     <div>
@@ -52,9 +52,9 @@ const Contact = () => {
                   </div>
                 </div>
                 
-                <div className="bg-pastel-lightgreen rounded-xl p-6 shadow-sm border border-pastel-green/30">
+                <div className="bg-pastel-pink/20 rounded-xl p-6 shadow-sm border border-pastel-pink/30">
                   <div className="flex items-start">
-                    <div className="bg-pastel-green p-3 rounded-full mr-4">
+                    <div className="bg-pastel-pink p-3 rounded-full mr-4">
                       <Phone size={20} className="text-gray-800" />
                     </div>
                     <div>
@@ -64,9 +64,9 @@ const Contact = () => {
                   </div>
                 </div>
                 
-                <div className="bg-pastel-lightpurple rounded-xl p-6 shadow-sm border border-pastel-purple/30">
+                <div className="bg-pastel-peach/20 rounded-xl p-6 shadow-sm border border-pastel-peach/30">
                   <div className="flex items-start">
-                    <div className="bg-pastel-purple p-3 rounded-full mr-4">
+                    <div className="bg-pastel-orange p-3 rounded-full mr-4">
                       <MapPin size={20} className="text-white" />
                     </div>
                     <div>
@@ -92,7 +92,7 @@ const Contact = () => {
                       required
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full px-4 py-2 bg-pastel-lightpurple/30 border border-pastel-purple/20 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
+                      className="w-full px-4 py-2 bg-pastel-peach/10 border border-pastel-peach/20 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
                     />
                   </div>
                   <div>
@@ -106,7 +106,7 @@ const Contact = () => {
                       required
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-4 py-2 bg-pastel-lightgreen/30 border border-pastel-green/20 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
+                      className="w-full px-4 py-2 bg-pastel-pink/10 border border-pastel-pink/20 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
                     />
                   </div>
                 </div>
@@ -122,7 +122,7 @@ const Contact = () => {
                     required
                     value={formData.subject}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 bg-pastel-lightpurple/30 border border-pastel-purple/20 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
+                    className="w-full px-4 py-2 bg-pastel-peach/10 border border-pastel-peach/20 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
                   />
                 </div>
                 
@@ -137,7 +137,7 @@ const Contact = () => {
                     required
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 bg-pastel-lightgreen/30 border border-pastel-green/20 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
+                    className="w-full px-4 py-2 bg-pastel-pink/10 border border-pastel-pink/20 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
                   ></textarea>
                 </div>
                 

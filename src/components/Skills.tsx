@@ -13,7 +13,7 @@ const skillSets = [
       { name: "Skill 4", level: 75 },
       { name: "Skill 5", level: 70 },
     ],
-    bgClass: "bg-pastel-lightpurple"
+    bgClass: "bg-pastel-peach"
   },
   {
     category: "Soft Skills",
@@ -24,7 +24,7 @@ const skillSets = [
       { name: "Team Collaboration", level: 85 },
       { name: "Adaptability", level: 80 },
     ],
-    bgClass: "bg-pastel-lightgreen"
+    bgClass: "bg-pastel-pink"
   },
   {
     category: "Tools & Technologies",
@@ -35,13 +35,13 @@ const skillSets = [
       { name: "Tool 4", level: 80 },
       { name: "Tool 5", level: 70 },
     ],
-    bgClass: "bg-pastel-lightpurple"
+    bgClass: "bg-pastel-peach"
   }
 ];
 
 const Skills = () => {
   return (
-    <AnimatedSection id="skills" className="container-section bg-gray-50">
+    <AnimatedSection id="skills" className="container-section bg-pastel-cream/50">
       <span className="block text-center text-primary font-medium mb-4">My Expertise</span>
       <h2 className="section-heading">Skills & Proficiencies</h2>
       <p className="section-subheading">
@@ -55,13 +55,13 @@ const Skills = () => {
               key={skillSet.category}
               className={cn(
                 "section-box p-6 hover:shadow-lg transition-shadow",
-                skillSet.bgClass + "/40",
+                skillSet.bgClass + "/10",
                 index === 0 && "lg:col-span-1",
                 index === 1 && "lg:col-span-1",
                 index === 2 && "lg:col-span-1"
               )}
             >
-              <div className={cn("h-2 w-20 mb-4 rounded-full", index % 2 === 0 ? "bg-pastel-purple" : "bg-pastel-green")}></div>
+              <div className={cn("h-2 w-20 mb-4 rounded-full", index % 2 === 0 ? "bg-pastel-orange" : "bg-pastel-pink")}></div>
               <h3 className="text-xl font-medium mb-6">{skillSet.category}</h3>
               <div className="space-y-4">
                 {skillSet.skills.map((skill) => (
@@ -70,11 +70,11 @@ const Skills = () => {
                       <span className="font-medium text-sm">{skill.name}</span>
                       <span className="text-xs text-gray-500">{skill.level}%</span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2">
+                    <div className="w-full bg-gray-200 rounded-full h-1.5">
                       <div
                         className={cn(
-                          "h-2 rounded-full", 
-                          index % 2 === 0 ? "bg-pastel-purple" : "bg-pastel-green"
+                          "h-1.5 rounded-full", 
+                          index % 2 === 0 ? "bg-pastel-orange" : "bg-pastel-pink"
                         )}
                         style={{ width: `${skill.level}%` }}
                       ></div>
@@ -104,7 +104,7 @@ const Skills = () => {
                 key={index}
                 className={cn(
                   "rounded-lg py-3 px-4 text-center transition-colors shadow-sm border",
-                  index % 2 === 0 ? "bg-pastel-lightpurple border-pastel-purple/30" : "bg-pastel-lightgreen border-pastel-green/30"
+                  index % 2 === 0 ? "bg-pastel-peach/20 border-pastel-peach/30" : "bg-pastel-pink/20 border-pastel-pink/30"
                 )}
               >
                 <span className="text-sm font-medium">{cert}</span>
