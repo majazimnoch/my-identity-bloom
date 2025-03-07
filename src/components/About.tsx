@@ -7,8 +7,9 @@ const About = () => {
       <div className="max-w-5xl mx-auto">
         <span className="block text-center text-primary font-medium mb-4">About Me</span>
         <h2 className="section-heading">My Professional Journey</h2>
+        <p className="creative-heading text-center mb-8">Creativity meets strategy</p>
         <p className="section-subheading">
-          A brief introduction to my background, philosophy, and what drives me professionally.
+          A brief introduction to my background, philosophy, and what drives me in the advertising and entertainment industry.
         </p>
         
         <div className="section-box p-8 mt-16">
@@ -28,19 +29,19 @@ const About = () => {
               </div>
             </div>
             <div className="flex flex-col justify-center">
-              <h3 className="text-2xl font-medium mb-6">
-                A Professional Dedicated to Excellence & Innovation
+              <h3 className="text-2xl font-medium mb-6 font-playfair">
+                A Creative Professional Dedicated to Excellence & Innovation
               </h3>
               <p className="text-gray-600 mb-6">
-                I am a seasoned professional with over a decade of experience in my field. My career has been defined by a commitment to excellence, a passion for innovation, and a drive to achieve exceptional results.
+                I am a seasoned creative professional with over a decade of experience in the advertising and entertainment industry. My career has been defined by a commitment to excellence, a passion for innovative storytelling, and a drive to achieve exceptional results.
               </p>
               <p className="text-gray-600 mb-6">
-                I believe in a thoughtful, user-centered approach to problem-solving, combining analytical thinking with creative solutions to address complex challenges.
+                I believe in a thoughtful, audience-centered approach to creative problem-solving, combining analytical thinking with imaginative solutions to address complex challenges.
               </p>
               <div className="grid grid-cols-2 gap-6 mt-4">
                 <div className="bg-pastel-lightpurple p-4 rounded-lg">
                   <h4 className="text-lg font-medium mb-2">Education</h4>
-                  <p className="text-gray-600">Bachelor of Science, University Name, Year</p>
+                  <p className="text-gray-600">Bachelor of Arts, University Name, Year</p>
                 </div>
                 <div className="bg-pastel-lightgreen p-4 rounded-lg">
                   <h4 className="text-lg font-medium mb-2">Location</h4>

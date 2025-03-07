@@ -133,6 +133,8 @@ export default {
 			},
 			fontFamily: {
 				sans: ['Inter var', 'sans-serif'],
+				playfair: ['Playfair Display', 'serif'],
+				caveat: ['Caveat', 'cursive'],
 			}
 		}
 	},

@@ -14,14 +14,15 @@ const Hero = () => {
           <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-12">
             <div className="md:w-1/2 animate-fade-in-left" style={{ animationDelay: '300ms' }}>
               <span className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
-                Professional Portfolio
+                Creative Portfolio
               </span>
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6">
+              <h1 className="font-playfair text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-4">
                 Hi, I'm <span className="text-primary">Your Name</span>.
               </h1>
+              <p className="creative-heading mb-6">Bringing ideas to life</p>
               <p className="text-xl text-gray-600 max-w-xl mb-8">
-                A passionate professional with expertise in your field. 
-                I create innovative solutions and deliver exceptional results.
+                A passionate creative professional with expertise in advertising and entertainment. 
+                I create innovative solutions that captivate audiences and deliver exceptional results.
               </p>
               <div className="flex flex-wrap gap-4">
                 <a href="#contact" className="primary-button">
