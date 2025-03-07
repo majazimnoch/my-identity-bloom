@@ -5,8 +5,8 @@ const Hero = () => {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative pt-20">
       <div className="absolute inset-0 -z-10 overflow-hidden">
-        <div className="absolute top-0 left-0 w-72 h-72 bg-primary/10 rounded-full filter blur-3xl opacity-70 -translate-x-1/2 -translate-y-1/2"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-300/20 rounded-full filter blur-3xl opacity-70 translate-x-1/3 translate-y-1/3"></div>
+        <div className="absolute top-0 left-0 w-72 h-72 bg-pastel-purple rounded-full filter blur-3xl opacity-70 -translate-x-1/2 -translate-y-1/2"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-pastel-green rounded-full filter blur-3xl opacity-70 translate-x-1/3 translate-y-1/3"></div>
       </div>
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -33,7 +33,7 @@ const Hero = () => {
           </div>
           <div className="md:w-1/2 animate-scale-in" style={{ animationDelay: '500ms' }}>
             <div className="relative">
-              <div className="w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full bg-gray-200 overflow-hidden mx-auto glass">
+              <div className="w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full bg-pastel-gray overflow-hidden mx-auto glass">
                 {/* Replace with your actual image */}
                 <img
                   src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
