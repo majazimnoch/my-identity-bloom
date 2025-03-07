@@ -73,57 +73,73 @@ const Projects = () => {
         A showcase of my professional achievements, notable projects, and contributions.
       </p>
 
-      {/* Category filters */}
-      <div className="flex flex-wrap justify-center gap-2 mb-12">
-        {categories.map((category) => (
-          <button
-            key={category}
-            onClick={() => setActiveCategory(category)}
-            className={cn(
-              "px-4 py-2 rounded-full text-sm font-medium transition-all",
-              activeCategory === category
-                ? "bg-primary text-white shadow-md"
-                : "bg-gray-100 text-gray-600 hover:bg-gray-200"
-            )}
-          >
-            {category}
-          </button>
-        ))}
-      </div>
+      <div className="section-box p-8">
+        {/* Category filters */}
+        <div className="flex flex-wrap justify-center gap-2 mb-12">
+          {categories.map((category, index) => (
+            <button
+              key={category}
+              onClick={() => setActiveCategory(category)}
+              className={cn(
+                "px-4 py-2 rounded-full text-sm font-medium transition-all",
+                activeCategory === category
+                  ? index % 2 === 0 
+                    ? "purple-gradient text-white shadow-md" 
+                    : "green-gradient text-gray-800 shadow-md"
+                  : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+              )}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
 
-      {/* Projects grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {filteredProjects.map((project) => (
-          <a
-            key={project.id}
-            href={project.link}
-            className="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full"
-          >
-            <div className="aspect-video overflow-hidden">
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-            </div>
-            <div className="p-6 flex flex-col flex-grow">
-              <div className="flex items-start justify-between mb-2">
-                <h3 className="text-xl font-medium group-hover:text-primary transition-colors">
-                  {project.title}
-                </h3>
-                <span className="inline-block p-2 rounded-full bg-gray-100 group-hover:bg-primary/10 transition-colors">
-                  <ArrowUpRight size={16} className="text-gray-400 group-hover:text-primary transition-colors" />
-                </span>
+        {/* Projects grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredProjects.map((project, index) => (
+            <a
+              key={project.id}
+              href={project.link}
+              className={cn(
+                "group overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full rounded-xl",
+                index % 2 === 0 ? "border border-pastel-purple/30" : "border border-pastel-green/30"
+              )}
+            >
+              <div className="aspect-video overflow-hidden">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
               </div>
-              <p className="text-gray-600 text-sm flex-grow">{project.description}</p>
-              <div className="mt-4">
-                <span className="inline-block px-3 py-1 rounded-full bg-gray-100 text-gray-600 text-xs font-medium">
-                  {project.category}
-                </span>
+              <div className="p-6 flex flex-col flex-grow">
+                <div className="flex items-start justify-between mb-2">
+                  <h3 className="text-xl font-medium group-hover:text-primary transition-colors">
+                    {project.title}
+                  </h3>
+                  <span className={cn(
+                    "inline-block p-2 rounded-full transition-colors",
+                    index % 2 === 0 ? "bg-pastel-lightpurple group-hover:bg-pastel-purple" : "bg-pastel-lightgreen group-hover:bg-pastel-green"
+                  )}>
+                    <ArrowUpRight size={16} className={cn(
+                      "transition-colors",
+                      index % 2 === 0 ? "text-gray-500 group-hover:text-white" : "text-gray-600 group-hover:text-gray-800"
+                    )} />
+                  </span>
+                </div>
+                <p className="text-gray-600 text-sm flex-grow">{project.description}</p>
+                <div className="mt-4">
+                  <span className={cn(
+                    "inline-block px-3 py-1 rounded-full text-xs font-medium",
+                    index % 2 === 0 ? "bg-pastel-lightpurple text-gray-700" : "bg-pastel-lightgreen text-gray-700"
+                  )}>
+                    {project.category}
+                  </span>
+                </div>
               </div>
-            </div>
-          </a>
-        ))}
+            </a>
+          ))}
+        </div>
       </div>
     </AnimatedSection>
   );

@@ -12,7 +12,8 @@ const skillSets = [
       { name: "Skill 3", level: 80 },
       { name: "Skill 4", level: 75 },
       { name: "Skill 5", level: 70 },
-    ]
+    ],
+    bgClass: "bg-pastel-lightpurple"
   },
   {
     category: "Soft Skills",
@@ -22,7 +23,8 @@ const skillSets = [
       { name: "Problem Solving", level: 90 },
       { name: "Team Collaboration", level: 85 },
       { name: "Adaptability", level: 80 },
-    ]
+    ],
+    bgClass: "bg-pastel-lightgreen"
   },
   {
     category: "Tools & Technologies",
@@ -32,7 +34,8 @@ const skillSets = [
       { name: "Tool 3", level: 75 },
       { name: "Tool 4", level: 80 },
       { name: "Tool 5", level: 70 },
-    ]
+    ],
+    bgClass: "bg-pastel-lightpurple"
   }
 ];
 
@@ -51,12 +54,14 @@ const Skills = () => {
             <div 
               key={skillSet.category}
               className={cn(
-                "bg-white rounded-xl p-6 shadow-sm",
+                "section-box p-6 hover:shadow-lg transition-shadow",
+                skillSet.bgClass + "/40",
                 index === 0 && "lg:col-span-1",
                 index === 1 && "lg:col-span-1",
                 index === 2 && "lg:col-span-1"
               )}
             >
+              <div className={cn("h-2 w-20 mb-4 rounded-full", index % 2 === 0 ? "bg-pastel-purple" : "bg-pastel-green")}></div>
               <h3 className="text-xl font-medium mb-6">{skillSet.category}</h3>
               <div className="space-y-4">
                 {skillSet.skills.map((skill) => (
@@ -67,7 +72,10 @@ const Skills = () => {
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2">
                       <div
-                        className="bg-primary h-2 rounded-full"
+                        className={cn(
+                          "h-2 rounded-full", 
+                          index % 2 === 0 ? "bg-pastel-purple" : "bg-pastel-green"
+                        )}
                         style={{ width: `${skill.level}%` }}
                       ></div>
                     </div>
@@ -79,7 +87,7 @@ const Skills = () => {
         </div>
 
         {/* Additional skills grid */}
-        <div className="mt-12 bg-white rounded-xl p-8 shadow-sm">
+        <div className="mt-12 section-box p-8">
           <h3 className="text-xl font-medium mb-6">Additional Skills & Certifications</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
@@ -94,7 +102,10 @@ const Skills = () => {
             ].map((cert, index) => (
               <div 
                 key={index}
-                className="bg-gray-50 rounded-lg py-3 px-4 text-center hover:bg-primary/5 transition-colors"
+                className={cn(
+                  "rounded-lg py-3 px-4 text-center transition-colors shadow-sm border",
+                  index % 2 === 0 ? "bg-pastel-lightpurple border-pastel-purple/30" : "bg-pastel-lightgreen border-pastel-green/30"
+                )}
               >
                 <span className="text-sm font-medium">{cert}</span>
               </div>

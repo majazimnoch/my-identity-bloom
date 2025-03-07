@@ -56,66 +56,86 @@ const Experience = () => {
       </p>
 
       <div className="max-w-5xl mx-auto mt-16">
-        <div className="flex flex-col md:flex-row gap-8">
-          {/* Timeline navigation */}
-          <div className="md:w-1/3">
-            <div className="sticky top-24">
-              <div className="space-y-2">
-                {experiences.map((exp) => (
-                  <button
-                    key={exp.id}
-                    onClick={() => setActiveExp(exp.id)}
-                    className={cn(
-                      "w-full text-left p-4 rounded-lg transition-all",
-                      activeExp === exp.id
-                        ? "bg-white shadow-md border-l-4 border-primary"
-                        : "hover:bg-white/50"
-                    )}
-                  >
-                    <h3 className="font-medium">{exp.title}</h3>
-                    <p className="text-sm text-gray-500">{exp.company} · {exp.period}</p>
-                  </button>
-                ))}
+        <div className="section-box p-8">
+          <div className="flex flex-col md:flex-row gap-8">
+            {/* Timeline navigation */}
+            <div className="md:w-1/3">
+              <div className="sticky top-24">
+                <div className="space-y-2">
+                  {experiences.map((exp, index) => (
+                    <button
+                      key={exp.id}
+                      onClick={() => setActiveExp(exp.id)}
+                      className={cn(
+                        "w-full text-left p-4 rounded-lg transition-all",
+                        activeExp === exp.id
+                          ? index % 2 === 0 
+                            ? "purple-gradient text-white shadow-md" 
+                            : "green-gradient text-gray-800 shadow-md"
+                          : "bg-gray-50 hover:bg-gray-100"
+                      )}
+                    >
+                      <h3 className="font-medium">{exp.title}</h3>
+                      <p className={cn(
+                        "text-sm", 
+                        activeExp === exp.id 
+                          ? "text-white/90" 
+                          : "text-gray-500"
+                      )}>
+                        {exp.company} · {exp.period}
+                      </p>
+                    </button>
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
 
-          {/* Experience details */}
-          <div className="md:w-2/3">
-            {experiences.map((exp) => (
-              <div
-                key={exp.id}
-                className={cn(
-                  "bg-white rounded-xl p-6 shadow-sm mb-8 transition-all duration-300",
-                  activeExp === exp.id
-                    ? "opacity-100 scale-100"
-                    : "opacity-0 scale-95 hidden"
-                )}
-              >
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 bg-primary/10 p-3 rounded-lg mr-4">
-                    <Briefcase size={24} className="text-primary" />
+            {/* Experience details */}
+            <div className="md:w-2/3">
+              {experiences.map((exp, index) => (
+                <div
+                  key={exp.id}
+                  className={cn(
+                    "rounded-xl p-6 transition-all duration-300 border",
+                    index % 2 === 0 
+                      ? "bg-pastel-lightpurple border-pastel-purple/30" 
+                      : "bg-pastel-lightgreen border-pastel-green/30",
+                    activeExp === exp.id
+                      ? "opacity-100 scale-100"
+                      : "opacity-0 scale-95 hidden"
+                  )}
+                >
+                  <div className="flex items-start">
+                    <div className={cn(
+                      "flex-shrink-0 p-3 rounded-lg mr-4",
+                      index % 2 === 0 ? "bg-pastel-purple" : "bg-pastel-green"
+                    )}>
+                      <Briefcase size={24} className={index % 2 === 0 ? "text-white" : "text-gray-800"} />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-medium">{exp.title}</h3>
+                      <p className="text-gray-500">{exp.company} · {exp.period}</p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="text-xl font-medium">{exp.title}</h3>
-                    <p className="text-gray-500">{exp.company} · {exp.period}</p>
+                  <p className="mt-4 text-gray-600">{exp.description}</p>
+                  
+                  <div className="mt-6">
+                    <h4 className="font-medium mb-3">Key Achievements:</h4>
+                    <ul className="space-y-2">
+                      {exp.achievements.map((achievement, i) => (
+                        <li key={i} className="flex items-start">
+                          <span className={cn(
+                            "inline-block w-2 h-2 rounded-full mt-2 mr-2",
+                            index % 2 === 0 ? "bg-pastel-purple" : "bg-pastel-green"
+                          )}></span>
+                          <span className="text-gray-600">{achievement}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
-                <p className="mt-4 text-gray-600">{exp.description}</p>
-                
-                <div className="mt-6">
-                  <h4 className="font-medium mb-3">Key Achievements:</h4>
-                  <ul className="space-y-2">
-                    {exp.achievements.map((achievement, index) => (
-                      <li key={index} className="flex items-start">
-                        <span className="inline-block w-1.5 h-1.5 rounded-full bg-primary mt-2 mr-2"></span>
-                        <span className="text-gray-600">{achievement}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>
